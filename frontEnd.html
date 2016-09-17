@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<title>Hack reCaptcha</title>
+<link rel="stylesheet" href="lib/bootstrap-3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="lib/main.css">
+
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<h1 class="col-lg-4 col-sm-4 col-md-4">
+			<img src="img/logo.png"
+				style="height: 70px; margin-left: 40px; margin-right: 0px"></img> <img
+				src="img/re.png" style="height: 70px; margin-left: -5px"></img>
+		</h1>
+		<br> <br>
+		<p class="introduction col-lg-6 col-sm-4 col-md-4"
+			style="text-align: right">
+			Created By: <br> Chuan Jiang, Yuting Guo, Jiale Feng, Shenyang
+			Liu
+		</p>
+		<img class="col-lg-2 col-sm-2 col-md-1" src="img/isu.png"
+			style="height: 50px; width: inherit"></img>
+	</div>
+	<div class="container col-lg-6 col-sm-6 col-md-6">
+		<div class="panel panel-default panel-left">
+			<div class="panel-body">
+				<h2>Google</h2>
+				<hr>
+				<form >
+					<div class="form-group">
+						<label for="email">Email:</label> <input style="width:50%" type="email" class="form-control" id="email" placeholder="Enter email">
+					</div>
+					<div class="form-group">
+						<label for="pwd">Password:</label> <input style="width:50%" type="password" class="form-control" id="pwd" placeholder="Enter password">
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox"> Remember me</label>
+					</div>
+				</form>
+
+				<form action="?" method="POST">
+					<div class="g-recaptcha"
+						data-sitekey="6LdkAAcUAAAAAGckXXPHhPeRfBHYVpccOhJ7U_5Q"></div>
+					<br /> <input type="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+
+	</div>
+	<div class="container col-lg-6 col-sm-6 col-md-6">
+		<div class="panel panel-default panel-right">
+			<div class="panel-body">
+				<h2>HACKreCAPTCHA</h2>
+				<hr>
+				</div>
+		</div>
+	</div>
+
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script type="text/javascript" href="lib/jquery-3.1.0/jquery.min.js"></script>
+	<script type="text/script"
+		href="lib/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

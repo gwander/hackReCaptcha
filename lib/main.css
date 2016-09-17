@@ -1,0 +1,40 @@
+.panel-body{
+	height:1000px;
+	background-color:#EEEEEE;
+	
+}
+.navbar{
+	height:140px;
+}
+.panel{
+	height:1000px;
+	margin-top:30px;
+}
+.panel-left{
+	margin-left:60px;
+	margin-right:5px;
+}
+
+.panel-right{
+	margin-right:60px;
+	margin-left:5px;
+}
+.container{
+	height:1000px;
+		margin-top:160px;
+}
+h1{
+	margin-top:30px;
+}
+.introduction{
+	margin-left:50px;
+	font-size:20px
+}
+.align_middle{
+	    display: block;
+	margin-top:auto;
+margin-bottom:auto;
+text-align:center	
+}
+hr{color:black;
+border-color:white}
