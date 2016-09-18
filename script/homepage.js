@@ -74,7 +74,10 @@ $(document).ready(function () {
 		'clientSecret': 'vLcr3884zxofreH3W5wDuTMG0Pw8-t0PqIbT8616'
 	});
 	
-	$('#btn_hack').click(function () {
+	$('#btn_hack').click(function (evt) {
+		evt.preventDefault();
+		
+		console.log('click #btn_hack');
 		var imageUrl = $('#imageUrl').val();
 		console.log(imageUrl);
 		$.post('saveimage.php', {
@@ -112,7 +115,11 @@ $(document).ready(function () {
 //		});
 	});
 	
-	$('#btn_hack2').click(function () {
+	$('#btn_hack2').click(function (evt) {
+		evt.preventDefault();
+		
+		console.log('click #btn_hack2');
+		
 		var canvases = $('.canvas-tile');
 		var tag = $('#txt_tag').val();
 		console.log(tag);
