@@ -1,28 +1,183 @@
-<!DOCTYPE html>
+
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-
-<script type="text/javascript" src="lib/jquery-3.1.0/jquery.min.js"></script>
-<script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-1.2.1.js"></script>
-
-<script type="text/javascript" src="script/altervista.js"></script>
-<script type="text/javascript" src="script/homepage.js"></script>
+<title>Hack reCaptcha</title>
+<link rel="stylesheet" href="lib/bootstrap-3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="lib/main.css">
 
 </head>
 <body>
-	<img id="image_check" />
-	<img id="image_check2" />
-	
-	<input id="txt_tag" type="text" />
-	
-	<table id="table_tiles">
-		<tbody>
-		</tbody>
-	</table>
-	
-	<button id="btn_hack">Hack It!</button>
-	<button id="btn_hack1">Hack It!</button>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<h1 class="col-lg-4 col-sm-4 col-md-4">
+			<img src="img/logo.png"
+				style="height: 70px; margin-left: 40px; margin-right: 0px"></img> <img
+				src="img/re.png" style="height: 70px; margin-left: -5px"></img>
+		</h1>
+		<br> <br>
+		<p class="introduction col-lg-6 col-sm-4 col-md-4"
+			style="text-align: right">
+			Created By: <br> Chuan Jiang, Yuting Guo, Jiale Feng, Shenyang
+			Liu
+		</p>
+		<img class="col-lg-2 col-sm-2 col-md-1" src="img/isu.png"
+			style="height: 50px; width: inherit"></img>
+	</div>
+	<div class="container col-lg-6 col-sm-6 col-md-6">
+		<div class="panel panel-default panel-left">
+			<div class="panel-body">
+				<h2>
+					reCAPTCHA -Powered by <img style="height: 40px"
+						src="img/google.png"></img>
+				</h2>
+				<hr>
+				<form>
+					<div class="form-group">
+						<label for="email">Email:</label> <input style="width: 50%"
+							type="email" class="form-control" id="email"
+							placeholder="Enter email">
+					</div>
+					<div class="form-group">
+						<label for="pwd">Password:</label> <input style="width: 50%"
+							type="password" class="form-control" id="pwd"
+							placeholder="Enter password">
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox"> Remember me</label>
+					</div>
+				</form>
+
+				<form action="?" method="POST">
+					<div class="g-recaptcha"
+						data-sitekey="6LdkAAcUAAAAAGckXXPHhPeRfBHYVpccOhJ7U_5Q"></div>
+					<br /> <input type="submit" value="Submit">
+				</form>
+				<hr>
+
+
+				<h3>
+					What is <a href="https://www.google.com/recaptcha/intro/index.html">reCAPTCHA</a>?
+				</h3>
+				<p>reCAPTCHA is an anti-robot verification service developed by
+					Google. It is claimed to have advantages of advanced security, ease
+					of Use and creation of value. It uses an advanced risk analysis
+					engine and adaptive CAPTCHAs to prevent automated software from
+					engaging in abusive activities on the webSite.</p>
+				<h3>
+					How <a href="https://www.google.com/recaptcha/intro/index.html">reCAPTCHA</a>
+					works?
+				</h3>
+				<p>After clicking the check box next to "I'm not a robot", it
+					will pop up a small window containing some images as well as a
+					related question. Users need to follow the instruction inside the
+					question and choose the correct images. If the answer is correct,
+					reCAPTCHA will verify that you are a human instead of a robot;
+					otherwise, a new set of images and a new question will be
+					regenerated and let the users try it again.</p>
+			</div>
+		</div>
+
+	</div>
+	<div class="container col-lg-6 col-sm-6 col-md-6">
+		<div class="panel panel-default panel-right">
+			<div class="panel-body">
+				<h2>
+					HACKreCAPTCHA -Powered by <img style="height: 35px"
+						src="img/clarifai.png"></img> & Thesaurus API
+				</h2>
+				<hr>
+				<form>
+					<div class="form-group col-lg-12 col-sm-12 col-md-12">
+						<label>Image Url</label> <input class="form-control" id="imageUrl"
+							type="text"></input>
+					</div>
+
+					<div class="form-group col-lg-6 col-sm-6 col-md-6">
+						<label>Width</label> <input
+							class="form-control col-lg-3 col-sm-3 col-md-3" id="dimension_x"
+							type="text"></input>
+					</div>
+					<div class="form-group col-lg-6 col-sm-6 col-md-6">
+						<label>Height</label> <input
+							class="form-control col-lg-3 col-sm-3 col-md-3" id="dimension_y"
+							type="text"></input>
+					</div>
+                    
+					<div class="form-group col-lg-12 col-sm-12 col-md-12">
+				        <button id="btn_hack">Load It!</button>
+				    </div>
+					
+					
+					
+					<div class="form-group col-lg-12 col-sm-12 col-md-12">
+						<label>Keyword</label> <input class="form-control required" id="txt_tag"
+							type="text" />
+					</div>
+					
+					
+				
+
+				
+                <div class="form-group col-lg-12 col-sm-12 col-md-12">
+				    <button id="btn_hack2">Hack It!</button>
+				</div>
+				
+				<div class="form-group col-lg-6 col-sm-6 col-md-6">
+				    <label>Original images</label>
+				</div>
+				<div class="form-group col-lg-6 col-sm-6 col-md-6">
+				    <label>Result</label>
+				</div>
+				
+				<div class="form-group col-lg-6 col-sm-6 col-md-6">
+				    <img id="image_check" />
+				</div>
+
+				<div class="form-group col-lg-6 col-sm-6 col-md-6">	
+				    <table id="table_tiles">
+					<tbody>
+					</tbody>
+				    </table>
+				</div>
+				
+				
+				
+				<h3>
+					Introducing HACKreCAPTCHA
+					
+				</h3>
+				<p>HACKreCAPTCHA is an easy-to-use anti-anti-robot tool to help users solve some
+				ridiculously hard questions generated by reCAPTCHA.</p>
+					
+				<h3>
+					How HACKreCAPTCHA works?
+				</h3>
+				<p>The main steps of how it works are as follows:
+				<br>
+				1. Capture the images generated by reCAPTCHA;
+				<br>
+				2. Extract the keyword in the question;
+				<br>
+				3. Use <a href="http://thesaurus.altervista.org/">Thesaurus</a> to find all possible synonyms of that keyword - List synonyms_keyword;
+				<br>
+				4. Use <a href="https://www.clarifai.com/">Clarifai</a> to generate the tags of each images - List tags;
+				<br>
+				5. Compare List tags with List synonyms_keyword, if there are words from two lists
+ 				match with each other, the corresponding image will be selected as one of the correct images.</p>
+				
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script type="text/javascript" src="lib/jquery-3.1.0/jquery.min.js"></script>
+	<script type="text/script"
+		src="lib/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="https://sdk.clarifai.com/js/clarifai-1.2.1.js"></script>
+
+	<script type="text/javascript" src="script/altervista.js"></script>
+	<script type="text/javascript" src="script/homepage.js"></script>
+
 </body>
 </html>
