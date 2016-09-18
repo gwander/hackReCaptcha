@@ -102,5 +102,5 @@ $(document).ready(function () {
 });
 
 window.onload = function() {
-	renderTiles('payload.jpg', 4, 3);
+	renderTiles('payload.jpg', 3, 3);
 };

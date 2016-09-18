@@ -25,7 +25,10 @@
 	<div class="container col-lg-6 col-sm-6 col-md-6">
 		<div class="panel panel-default panel-left">
 			<div class="panel-body">
-				<h2>reCAPTCHA -Powered by <img style="height:40px"src="img/google.png"></img></h2>
+				<h2>
+					reCAPTCHA -Powered by <img style="height: 40px"
+						src="img/google.png"></img>
+				</h2>
 				<hr>
 				<form>
 					<div class="form-group">
@@ -77,18 +80,55 @@
 	<div class="container col-lg-6 col-sm-6 col-md-6">
 		<div class="panel panel-default panel-right">
 			<div class="panel-body">
-				<h2>HACKreCAPTCHA -Powered by <img style="height:35px" src="img/clarifai.png"></img> & Thesaurus API</h2>
+				<h2>
+					HACKreCAPTCHA -Powered by <img style="height: 35px"
+						src="img/clarifai.png"></img> & Thesaurus API
+				</h2>
 				<hr>
+				<form>
+					<div class="form-group col-lg-12 col-sm-12 col-md-12">
+						<label>Image Url</label> <input class="form-control" id="imageUrl"
+							type="text"></input>
+					</div>
+					<div class="form-group col-lg-6 col-sm-6 col-md-6">
+
+						<label>Keyword</label> <input class="form-control required" id="txt_tag"
+							type="text" />
+					</div>
+					<div class="form-group col-lg-3 col-sm-3 col-md-3">
+						<label>Width</label> <input
+							class="form-control col-lg-3 col-sm-3 col-md-3" id="dimension_x"
+							type="text"></input>
+					</div>
+					<div class="form-group col-lg-3 col-sm-3 col-md-3">
+						<label>Height</label> <input
+							class="form-control col-lg-3 col-sm-3 col-md-3" id="dimension_y"
+							type="text"></input>
+					</div>
+
+				</form>
+
+
+				<button id="btn_hack">Hack It!</button>
+				<img id="image_check"
+					src="https://pbs.twimg.com/profile_images/589002505150976000/5L0vyM1M.jpg" />
+				<table id="table_tiles">
+					<tbody>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
 
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-	<script type="text/javascript" href="lib/jquery-3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/jquery-3.1.0/jquery.min.js"></script>
 	<script type="text/script"
-		href="lib/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="script/altervista.js"></script>
-<script type="text/javascript" src="script/homepage.js"></script>
-		
+		src="lib/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="https://sdk.clarifai.com/js/clarifai-1.2.1.js"></script>
+
+	<script type="text/javascript" src="script/altervista.js"></script>
+	<script type="text/javascript" src="script/homepage.js"></script>
+
 </body>
 </html>
